@@ -17,7 +17,7 @@ const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
   0.4,
-  1000
+  5000
 );
 camera.position.z = 30;
 
@@ -31,14 +31,14 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // --- Stars ---
-const STAR_COUNT = 20000;
+const STAR_COUNT = 100000;
 const starPositions = new Float32Array(STAR_COUNT * 3);
 const starColors = new Float32Array(STAR_COUNT * 3); // per-star color
 for (let i = 0; i < STAR_COUNT; i++) {
   const i3 = i * 3;
-  starPositions[i3 + 0] = (Math.random() - 0.5) * 400;
-  starPositions[i3 + 1] = (Math.random() - 0.5) * 400;
-  starPositions[i3 + 2] = (Math.random() - 0.5) * 400;
+  starPositions[i3 + 0] = (Math.random() - 0.5) * 1000;
+  starPositions[i3 + 1] = (Math.random() - 0.5) * 1000;
+  starPositions[i3 + 2] = (Math.random() - 0.5) * 1000;
 
   // Start all white
   starColors[i3 + 0] = 1.0;
