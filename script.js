@@ -31,7 +31,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // --- Stars ---
-const STAR_COUNT = 100000;
+const STAR_COUNT = 200000;
 const starPositions = new Float32Array(STAR_COUNT * 3);
 const starColors = new Float32Array(STAR_COUNT * 3); // per-star color
 for (let i = 0; i < STAR_COUNT; i++) {
