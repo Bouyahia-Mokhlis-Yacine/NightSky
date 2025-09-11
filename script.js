@@ -220,25 +220,25 @@ messageBox.style.display = "none"; // hidden by default
 document.body.appendChild(messageBox);
 
 // --- Update on click ---
-function onMouseClick(event) {
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+// function onMouseClick(event) {
+//   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+//   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
-  raycaster.setFromCamera(mouse, camera);
+//   raycaster.setFromCamera(mouse, camera);
 
-  const intersects = raycaster.intersectObject(clickableStars);
+//   const intersects = raycaster.intersectObject(clickableStars);
 
-  if (intersects.length > 0) {
-    const index = intersects[0].index;
-    highlightStar(index);
+//   if (intersects.length > 0) {
+//     const index = intersects[0].index;
+//     highlightStar(index);
 
-    // Show message
-    messageBox.innerText = `✨ You clicked star #${index}!`;
-    messageBox.style.display = "block";
+//     // Show message
+//     messageBox.innerText = `✨ You clicked star #${index}!`;
+//     messageBox.style.display = "block";
 
-    // Auto-hide after 3s
-    setTimeout(() => {
-      messageBox.style.display = "none";
-    }, 3000);
-  }
-}
+//     // Auto-hide after 3s
+//     setTimeout(() => {
+//       messageBox.style.display = "none";
+//     }, 3000);
+//   }
+// }
